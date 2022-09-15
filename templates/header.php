@@ -50,7 +50,7 @@ $userData = $userDao->verifyToken(false);
         </a>
       </div>
       <div id="title">
-        <h3>Pet Club Imperatriz</h3>
+        <h3>Pets Club Imperatriz</h3>
       </div>
     </div>
 
