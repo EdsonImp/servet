@@ -1,0 +1,565 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+html {
+  min-height: 100hv;
+  position: relative;
+}
+
+/* Container geral para todos*/
+#main-container {
+  /* faz a tela minima aparece com footer e header*/
+  min-height: 68vh;
+  background-color: rgb(190, 59, 59);
+  padding: 40px;
+}
+
+/*Início header e navbar*/
+
+.logo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100hv;
+  min-height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  color: #5e5959;
+}
+
+#image {
+  position: absolute;
+  max-width: 170px;
+  left: 15px;
+  top: 10px;
+  z-index: 1;
+}
+
+.image img {
+  width: 170px;
+}
+
+.nav-bar {
+  width: 100%;
+  background-color: #000;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-bar ul li {
+  padding: 10px;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  font-weight: 500;
+  padding: 2px;
+  margin: 2px;
+}
+
+.nav-bar ul li a:hover {
+  color: grey;
+}
+
+/* aside toggle da navbar*/
+
+/* checando o botao togle*/
+.toggle-container input:checked~nav,
+.toggle-container input:checked~nav ul {
+  display: block;
+  background-color: white;
+  min-height: 150px;
+  min-width: 160px;
+  opacity: 80%;
+  right: 0px;
+  bottom: -160px;
+  transition: 0.5s;
+}
+
+.toggle-container {
+  position: relative;
+  display: flex;
+  background-color: #000;
+  height: 40px;
+  z-index: 1;
+  display: none;
+}
+
+.toggle-container nav {
+  position: absolute;
+  bottom: 10px;
+}
+
+.toggle-container nav ul li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 20px;
+  margin: auto 30px;
+  border-bottom: 1px solid #5e5959;
+}
+
+.toggle-container nav ul {
+  display: none;
+  list-style: none;
+}
+
+.toggle {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  max-width: 25px;
+  min-width: 25px;
+  color: white;
+  font-size: 25px;
+  display: none;
+}
+
+/*Fim header*/
+
+/*index*/
+#index-container {
+  justify-content: space-evenly;
+}
+
+#index-container-img {
+  max-width: 400px;
+}
+
+#index-container-img img {
+  max-width: 380px;
+}
+
+#index-container-txt {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  color: white;
+}
+
+/*container editar registro*/
+
+#main-container h2{
+  text-align: center;
+  color: white;
+  opacity: 50%  ;
+  background-color: rgb(148, 32, 32);
+  
+}
+#container-form-edit-user,
+#container-form-edit-senha {
+  max-width: 400px;
+  min-width: 330px;
+  margin: 30px auto;
+  background-color: rgb(148, 32, 32);
+  border-radius: 30px;
+}
+
+#container-form-edit-user form,
+#container-form-edit-senha form {
+  max-width: 400px;
+  margin: 10px auto;
+  color: white;
+}
+
+#container-form-edit-user form h2,
+#container-form-edit-senha form h2 {
+  color: white;
+  text-align: center;
+  width: 230px;
+  margin: auto;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+.container-edit {
+  justify-content: space-evenly;
+}
+
+/*fim container edit registro*/
+
+
+/*Login e registro*/
+#login-container form,
+#register-container form {
+  max-width: 400px;
+  margin: 30px auto;
+}
+#login-container,
+#register-container {
+ background-color: rgb(148, 32, 32);
+ border-radius: 30px;
+
+}
+
+#login-container h2,
+#register-container h2 {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  color: white;
+}
+
+#auth-row {
+  justify-content: space-evenly;
+  color: white;
+}
+
+.card-btn {
+  color: white;
+  background-color: rgb(190, 59, 59);
+  border:1px solid rgb(211, 210, 226);
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 00.5s;
+}
+.card-btn:hover{
+  color: rgb(190, 59, 59);
+  background-color: rgb(211, 210, 226);
+  border: 1px solid rgb(211, 210, 226);
+  margin-bottom: 20px;
+}
+
+/*fim login registro*/
+
+/*Inicio cadastro pet*/
+
+#pet-container {
+  justify-content: space-evenly;
+}
+
+#pet-container-form {
+  max-width: 400px;
+  min-width: 330px;
+  margin: 30px auto;
+  background-color: rgb(148, 32, 32);
+  border-radius: 30px;
+}
+
+#pet-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 400px;
+  min-width: 330px;
+  margin: 30px auto;
+  background-color: rgb(148, 32, 32);
+  border-radius: 30px;
+}
+
+#pet-container-form h2,
+#pet-image-container h2 {
+  text-align: center;
+  min-width: 230px;
+  margin: 0 auto;
+  padding: 10px;
+  color: white;
+}
+
+.form-label{
+  color: white;
+  padding-top: 10px;
+}
+
+.pet-form {
+  display: flex;
+  flex-direction: column;
+}
+#btn-label-cad{
+  background-color: rgb(190, 59, 59);
+  border: 1px solid white;
+  border-radius: 3px;
+  color: white;
+  min-width: 90px;
+  font-size: 20px;
+  padding: 2px;
+  cursor: pointer;
+  transition: 00.5s;
+}
+#btn-label-cad:hover{
+  color: rgb(190, 59, 59);
+  background-color: rgb(211, 210, 226);
+  border: 1px solid rgb(211, 210, 226);
+  }
+/*Fim cadastro pet*/
+/*Inicio edita pet mypets*/
+#edit-container{
+justify-content: space-evenly;
+border-bottom:2px solid white;
+}
+#edicao{
+  color: white;
+  text-align: center;
+}
+#edit-form{
+  max-width: 400px;
+  min-width: 350px;
+  margin: 30px auto;
+  background-color: rgb(148, 32, 32);
+  border-radius: 30px;
+}
+#edit-form h2,
+#edit-pets-img h2{
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+}
+#edit-pets-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 400px;
+  min-width: 350px;
+  max-height: 380px;
+  margin: 30px auto;
+  background-color: rgb(148, 32, 32);
+  border-radius: 25px;
+}
+.edit-label-form{
+  color: white;
+}
+.btn-file{
+  max-width: 180px;
+  padding: 3px;
+   background-color: white;
+   border: 1px solid white;
+  color: rgb(190, 59, 59);
+  font-size: 17px;
+  cursor: pointer;
+  transition: 00.5s;
+  }
+  .btn-file:hover{
+  background-color: rgb(190, 59, 59);
+  color: white;
+  border: 1px solid white;
+
+  }
+
+/*Inicio card-pet*/
+#pet-card {
+  min-width: 280px;
+  max-width: 280px;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  padding: 15px;
+  margin: 10px 10px;
+}
+
+.card-information p {
+  display: none;
+}
+
+.card-information:hover p {
+  display: block;
+  margin: auto;
+}
+
+.pet-dados {
+  background-color: white;
+  opacity: 40%;
+  color: rgb(110, 19, 19);
+  font-weight: bold;
+  border-radius: 15%;
+  max-width: 250px;
+  text-align: center;
+  margin: auto;
+}
+
+/*fim pet-card*/
+/* Inicio lista de pets*/
+#search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 500px;
+  max-height: 60px;
+}
+
+.form-icon {
+  color: #be3b3b;
+  font-size: 20px;
+}
+
+.form-icon:hover {
+  color: #802b2b;
+  font-size: 25px;
+}
+
+#search-bar {
+  margin: 10px auto;
+}
+
+#pet-list-container {
+  margin: auto;
+  border-top: 2px solid white;
+}
+
+#input-search::placeholder {
+  color: white;
+}
+
+#input-search {
+  border: none;
+  color: #BADBCC;
+  background-color: #d38282;
+  border-radius: 10px;
+  padding-left: 10px;
+  min-height: 30px;
+}
+
+#input-button {
+  border: none;
+  border-radius: 10px;
+  padding: 0px 10px;
+  min-height: 30px;
+  background-color: #be3b3b;
+  color: white;
+}
+
+/* mensageria inicio*/
+.msg-container {
+  background-color: rgb(190, 59, 59);
+  padding: 15px;
+}
+
+.msg {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  border: solid 1px rgb(187, 150, 150);
+  text-align: center;
+}
+
+.msg.error {
+  color: #842029;
+  background-color: #F8D7DA;
+  border-color: #F5C2C7;
+}
+
+.msg.success {
+  color: #0F5132;
+  background-color: #D1E7DD;
+  border-color: #BADBCC;
+}
+
+/*Fim mensageria*/
+
+/* footer*/
+footer {
+  width: 100%;
+
+  bottom: 0;
+  text-align: center;
+  background-color: #000;
+  color: #FFF;
+  padding: 15px 0;
+}
+
+
+/* Responsividade */
+@media(max-width: 750px) {
+
+  .logo {
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+
+  #image {
+    position: absolute;
+    max-width: 150px;
+    left: 5px;
+    top: 1px;
+    z-index: 1;
+  }
+
+  #image img {
+    max-width: 138px;
+  }
+
+  /*sumir menu e aparecer togle*/
+  .toggle-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .toggle {
+    display: flex;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+}
+
+@media(max-width: 667px) {
+
+  /* Header e navbar*/
+  #image {
+    width: 100hv;
+    position: relative;
+  }
+
+  #title {
+    margin-top: 15px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*Barra de busca pets*/
+  #search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    max-width: 350px;
+    max-height: 60px;
+  }
+
+  #input-search {
+    max-width: 120px;
+  }
+
+  /* home inicio*/
+  #index-container-img img {
+    max-width: 250px;
+  }
+
+}
